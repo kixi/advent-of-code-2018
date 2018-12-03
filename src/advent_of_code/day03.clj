@@ -15,9 +15,6 @@
      str/split-lines
      (map line-to-claim)))
 
-(def input-claims (with-open [rdr (clojure.java.io/reader "src/advent_of_code/day03.input")]
-                    (dorun (map line-to-claim (line-seq rdr)))))
-
 (defn area-from-claim [claim]
   (for [x (range (:lx claim))
         y (range (:ly claim))]
