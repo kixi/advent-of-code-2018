@@ -1,7 +1,7 @@
 (ns advent-of-code.day05)
 
 (def input "dabAcCaCBAcCcaDA")
-(def input (slurp "src/advent_of_code/day05.input"))
+(def input (clojure.string/trim (slurp "src/advent_of_code/day05.input")))
 
 (defn react? [unit1 unit2]
    (and (not= unit1 unit2)
@@ -18,8 +18,6 @@
  (reduce react-poly
          []
          input)
- (apply str)
  count)
-
 
               
